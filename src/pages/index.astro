@@ -2,8 +2,19 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting.jsx';
 const pageTitle = "Home Page";
+import { Code } from 'astro/components';
 ---
 <BaseLayout pageTitle={pageTitle}>
-	<h2>My awesome blog subtitle</h2>
+	<h2 >My awesome blog subtitle</h2>
 	<Greeting client:load messages={["Hello", "Hey", "Howdy", "Hej", "Hallo", "Hola", "Habari"]} />
+	<div class="max-w-5xl mx-auto ">
+	<pre class="flex">
+		<code class="language-python">
+			Class Model():
+				def foobar(self, val):
+					print(val)
+					return None
+		</code>
+	</pre>
+</div>
 </BaseLayout>

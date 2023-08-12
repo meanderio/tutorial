@@ -9,15 +9,17 @@ import '@fontsource-variable/inter';
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link href="/prism.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-  <body>
+  <body class="">
     <Header />
     <h1>{pageTitle}</h1>
     <slot />
     <Footer />
+    <script src="../scripts/prism.js"></script>
     <script>
       import "../scripts/menu.js";
     </script>
